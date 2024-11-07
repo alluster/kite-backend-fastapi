@@ -1,0 +1,37 @@
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+*.env
+
+# Virtual environment directories
+.venv/
+env/
+envs/
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Testing files
+.coverage
+.pytest_cache/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Heroku
+.heroku/
+
+# Logs
+*.log
+
+# Misc
+*.iml
+
+venv/
+venv
