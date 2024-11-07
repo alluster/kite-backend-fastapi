@@ -8,6 +8,8 @@ from routes.supplier import router as supplier_router
 from routes.google import router as google
 from dotenv import load_dotenv
 import os
+import uvicorn
+
 
 load_dotenv()
 
@@ -17,6 +19,11 @@ if not BASE_URL:
 import logging
 
 app = FastAPI()
+if __name__ == "__main__":
+    # Use the PORT environment variable, default to 8000 for local development
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
+    
 origins = [BASE_URL]
 
 app.add_middleware(
